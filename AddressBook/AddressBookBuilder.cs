@@ -5,7 +5,7 @@ using System.Text;
 
 namespace AdressBook
 {
-    public class AdressBookBuilder : IContacts
+    class AdressBookBuilder : IContacts
     {
         public List<Contact> contactList;
 
@@ -227,20 +227,37 @@ namespace AdressBook
         {
             FileReadWrite.readFromTxtFile();
         }
+
         /// <summary>
-        /// Writes the in text file.
+        /// Writes the in CSV file.
         /// </summary>
         public void writeInCSVFile()
         {
-            FileReadWrite.writeintoCsvFile(contactList);
+            FileReadWrite.writeIntoCsvFile(contactList);
         }
 
         /// <summary>
-        /// Reads from text file.
+        /// Reads from CSV file.
         /// </summary>
         public void readFromCSVFile()
         {
             FileReadWrite.readFromCSVFile();
+        }
+
+        /// <summary>
+        /// Writes the in JSON file.
+        /// </summary>
+        public void writeInJSONFile()
+        {
+            FileReadWrite.writeIntoJSONFile(contactList);
+        }
+
+        /// <summary>
+        /// Reads from JSON file.
+        /// </summary>
+        public void readFromJSONFile()
+        {
+            FileReadWrite.readFromJSONFile();
         }
     }
 }
