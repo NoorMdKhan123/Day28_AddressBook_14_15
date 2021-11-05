@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using System.IO;
+using Newtonsoft.Json;
 
 namespace AdressBook
 {
@@ -10,7 +11,9 @@ namespace AdressBook
         public static string textFilePath =
             @"C:\Users\md048\source\repos\AddressBookUC1415\AddressBook\Contact.txt";
         public static string csvFilePath =
-            @"C:\Users\md048\source\repos\AddressBookUC1415\AddressBookContact.csv";
+            @"C:\Users\md048\source\repos\AddressBookUC1415\AddressBook\Contact.csv";
+        public static string jsonFilePath =
+            @"C:\Users\md048\source\repos\AddressBookUC1415\AddressBook\Contact.json";
 
         /// <summary>
         /// Write into txt file.
@@ -49,7 +52,7 @@ namespace AdressBook
                     string data = "";
                     while ((data = streamReader.ReadLine()) != null)
                     {
-                        Console.WriteLine(data);
+                        Console.WriteLine("\n" + data);
                     }
                     Console.ReadLine();
                 }
@@ -64,7 +67,7 @@ namespace AdressBook
         /// Write into CSV file
         /// </summary>
         /// <param name="contacts">The contacts.</param>
-        public static void writeintoCsvFile(List<Contact> contacts)
+        public static void writeIntoCsvFile(List<Contact> contacts)
         {
             if (File.Exists(csvFilePath))
             {
@@ -96,8 +99,56 @@ namespace AdressBook
                 string[] csv = data.Split(",");
                 foreach (string dataCsv in csv)
                 {
-                    Console.WriteLine(dataCsv);
+                    Console.WriteLine("\n" + dataCsv);
                 }
+            }
+        }
+
+        /// <summary>
+        /// Writes the into json file.
+        /// </summary>
+        /// <param name="contacts">The contacts.</param>
+        public static void writeIntoJSONFile(List<Contact> contacts)
+        {
+            if (File.Exists(jsonFilePath))
+            {
+                JsonSerializer jsonSerializer = new JsonSerializer();
+                using (StreamWriter streamWriter = new StreamWriter(jsonFilePath))
+                using (JsonWriter writer = new JsonTextWriter(streamWriter))
+                {
+                    jsonSerializer.Serialize(writer, contacts);
+                }
+                Console.WriteLine("SucessFully write into JSON file");
+            }
+            else
+            {
+                Console.WriteLine("No File Beacuse Of Wrong Path Or File Name");
+            }
+        }
+
+        /// <summary>
+        /// Reads from json file.
+        /// </summary>
+        public static void readFromJSONFile()
+        {
+            if (File.Exists(jsonFilePath))
+            {
+                List<Contact> contacts = JsonConvert.DeserializeObject<List<Contact>>(File.ReadAllText(jsonFilePath));
+                foreach (Contact contact in contacts)
+                {
+                    Console.Write("\n" + contact.firstName);
+                    Console.Write("\n" + contact.lastName);
+                    Console.Write("\n" + contact.address);
+                    Console.Write("\n" + contact.city);
+                    Console.Write("\n" + contact.state);
+                    Console.Write("\n" + contact.zip);
+                    Console.Write("\n" + contact.phoneNumber);
+                    Console.Write("\n" + contact.email);
+                }
+            }
+            else
+            {
+                Console.WriteLine("No File Beacuse Of Wrong Path Or File Name");
             }
         }
     }

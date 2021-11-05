@@ -12,3 +12,5 @@ C:\Users\md048\source\repos\AddressBookUC1415\AddressBook\obj\Debug\netcoreapp3.
 C:\Users\md048\source\repos\AddressBookUC1415\AddressBook\obj\Debug\netcoreapp3.1\AddressBook.dll
 C:\Users\md048\source\repos\AddressBookUC1415\AddressBook\obj\Debug\netcoreapp3.1\AddressBook.pdb
 C:\Users\md048\source\repos\AddressBookUC1415\AddressBook\obj\Debug\netcoreapp3.1\AddressBook.genruntimeconfig.cache
+C:\Users\md048\source\repos\AddressBookUC1415\AddressBook\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\md048\source\repos\AddressBookUC1415\AddressBook\obj\Debug\netcoreapp3.1\AddressBook.csproj.CopyComplete

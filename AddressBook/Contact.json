@@ -1,0 +1,32 @@
+[
+  {
+    "firstName": "Raghav",
+    "lastName": "Wandre",
+    "address": "kalyan",
+    "city": "kalyan",
+    "state": "maharashtra",
+    "zip": "421301",
+    "phoneNumber": "8143160",
+    "email": "ragh@gmail.com"
+  },
+  {
+    "firstName": "Gunjan",
+    "lastName": "Wandre",
+    "address": "kalyan",
+    "city": "Kalyan",
+    "state": "maharashtra",
+    "zip": "421301",
+    "phoneNumber": "9791418728",
+    "email": "Gunja@gmail.com"
+  },
+  {
+    "firstName": "Pratham",
+    "lastName": "Khedwan",
+    "address": "shivaji chowk",
+    "city": "mumbai",
+    "state": "maharashtra",
+    "zip": "400006",
+    "phoneNumber": "92429393",
+    "email": "PK@gmail.com"
+  }
+]
