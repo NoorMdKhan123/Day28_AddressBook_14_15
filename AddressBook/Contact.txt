@@ -1,0 +1,35 @@
+﻿FirstName = Raghavendra
+ Last Name = Wandre
+ Address = kalyan
+ City = kalyan
+ State = maharashtra 
+ Zip = 421301
+ Phone Number = 996745
+ Email = rw
+
+ FirstName = Gunjan
+ Last Name = Wandre
+ Address = kalyan
+ City = kaylayn
+ State = maharashtra
+ Zip = 1234
+ Phone Number = 3385456
+ Email = GW
+
+ FirstName = Pratham
+ Last Name = Khedwan
+ Address = Mumbai
+ City = Mumbai
+ State = maharashtra
+ Zip = 400002
+ Phone Number = 7516933
+ Email = KP
+
+ FirstName = Yash
+ Last Name = Khedwan
+ Address = Mumbai
+ City = Mumbai
+ State = Maharashtra
+ Zip = 400002
+ Phone Number = 3523456
+ Email = YK
